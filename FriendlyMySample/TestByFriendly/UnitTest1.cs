@@ -29,7 +29,7 @@ namespace TestByFriendly
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethod1_Dynamic()
         {
             dynamic formVar = this.app.Type<Application>().OpenForms[0];   // Formオブジェクトへの参照を持つDynamicAppVar
             string text = formVar.txt_Id.Text;                             // formVarからアクセスする
@@ -38,7 +38,7 @@ namespace TestByFriendly
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void TestMethod2_Dynamic()
         {
             dynamic formVar = this.app.Type<Application>().OpenForms[0];
             formVar.txt_Id.Text = "10";                                    // formVarから普通に設定できる
@@ -49,7 +49,7 @@ namespace TestByFriendly
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void TestMethod3_Dynamic()
         {
             dynamic formVar = this.app.Type<Application>().OpenForms[0];
             var form = new WindowControl(formVar);                    // これを使うことで後のWaitが楽になる
@@ -72,7 +72,7 @@ namespace TestByFriendly
         }
 
         [TestMethod]
-        public void TestMethod4()
+        public void TestMethod4_Dynamic()
         {
             dynamic formVar = this.app.Type<Application>().OpenForms[0];
             var form = new WindowControl(formVar);
