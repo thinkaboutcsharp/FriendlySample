@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendlyMySample", "Friendl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestByFriendly", "TestByFriendly\TestByFriendly.csproj", "{F4F7FD76-A458-4AC6-94EA-13D07DBCB7C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intruder", "Intruder\Intruder.csproj", "{CC4929C7-A2AF-4177-B937-6447C1D45339}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F4F7FD76-A458-4AC6-94EA-13D07DBCB7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4F7FD76-A458-4AC6-94EA-13D07DBCB7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4F7FD76-A458-4AC6-94EA-13D07DBCB7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4929C7-A2AF-4177-B937-6447C1D45339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4929C7-A2AF-4177-B937-6447C1D45339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4929C7-A2AF-4177-B937-6447C1D45339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4929C7-A2AF-4177-B937-6447C1D45339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
