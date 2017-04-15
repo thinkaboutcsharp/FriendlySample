@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -17,12 +18,16 @@ namespace Intruder
             Type infoType = infoList[0].GetType();  // FriendlyMySample.MainForm.Infoクラス
             PropertyInfo idProp = infoType.GetProperty("Id", BindingFlags.NonPublic | BindingFlags.Instance);
             PropertyInfo nameProp = infoType.GetProperty("Name", BindingFlags.NonPublic | BindingFlags.Instance);
+            Expression<Func<object, string>> idGetter = (info => idProp.GetValue(info) as string);
+            Expression<Func<object, string>> nameGetter = (info => nameProp.GetValue(info) as string);
+            var getId = idGetter.Compile();
+            var getName = nameGetter.Compile();
 
             Assert.AreEqual<int>(100, infoList.Count);
             for (int i = 0; i < 100; i++)
             {
-                Assert.AreEqual<string>(infos[i].id, (string)idProp.GetValue(infoList[i]));
-                Assert.AreEqual<string>(infos[i].name, (string)nameProp.GetValue(infoList[i]));
+                Assert.AreEqual<string>(infos[i].id, getId(infoList[i]));
+                Assert.AreEqual<string>(infos[i].name, getName(infoList[i]));
             }
         }
 
